@@ -38,43 +38,29 @@
             </div>
         <!-- search end -->
 
-            <a href="post_form.html"><i class="fa-regular fa-square-plus ms-0 me-5 fs-3 text-white opacity-75"></i></a>
+            <a href="post_form.html"><i class="fa-regular fa-square-plus me-4 fs-3 text-white opacity-75"></i></a>
 
         <!-- profile dropdown start -->
 
-        <div class="btn-group me-5">
-            <a href="#" class="btn-img img dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropdown nav-item mr-lg-4" style="margin-right: 6em;">
+            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">
                 <img class="profile-small" src="images/profilepic.png" alt="Avatar">
+                <!-- <b class="caret"></b> -->
             </a>
-            <div class="dropdown-menu">
-            <a class="dropdown-item d-flex align-items-center" href="profile.html">
-                <div class="icon d-flex align-items-center justify-content-center mr-3">
-                    <span class="ion-ios-mail"></span>
-                </div>
-                Profile
-            </a>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="icon d-flex align-items-center justify-content-center mr-3">
-                    <span class="ion-ios-heart"></span>
-                </div>
-                All posts
-            </a>
-            <a class="dropdown-item d-flex align-items-center" href="profile_edit.html">
-                <div class="icon d-flex align-items-center justify-content-center mr-3">
-                    <span class="ion-ios-person-add"></span>
-                </div>
-                Edit Profile
-            </a>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-                <div class="icon d-flex align-items-center justify-content-center mr-3">
-                    <span class="ion-ios-power"></span>
-                </div>
-                Logout
-            </a>
-            </div>
+            <ul class="dropdown-menu p-2" role="menu">
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link scroll">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{%url 'profile-update' request.user.profile.id%}" class="nav-link scroll">Edit profile</a>
+                </li>
+                <div class="dropdown-divider"></div>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link scroll">Logout</a>
+                </li>
+            </ul>
         </div>
-
-            <!-- profile dropdown end -->
+                    <!-- profile dropdown end -->
 
 
     </nav>
