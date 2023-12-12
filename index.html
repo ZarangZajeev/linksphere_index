@@ -67,6 +67,26 @@
     <!-- nav ends -->
 
     <div class="container d-flex flex-column justify-content-center align-items-center mt-5">
+
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="container rounded-pill post p-2 mt-3 d-flex justify-content-evenly">
+                {%csrf_token%}
+                <div class="">
+                    <img class="profile-small ms-3 me-3" src="{%static 'socialapp/images/profilepic.png'%}" alt="">
+                </div>
+                <div class="">
+                    <input class="load" name="post_image" type="file" id="file" accept="image/*">
+                    <label class="upload d-flex justify-content-center align-items-center" style="width: 60px;" for="file"><img src="{%static 'socialapp/images/upload.png'%}" style="width: 30px;" alt=""></label>
+                </div>
+                <div class="">
+                    <input class="form-control rounded-pill" type="text" name="title" id="" placeholder="captions...">
+                </div>
+                <div class="">
+                    <button class="btn btn-primary" type="submit">Post</button>
+                </div>
+            </div>
+        </form>
+
         <!-- post section start -->
         <div class="border border-1 rounded-4 mt-4 w-50">
             <div class="ms-2 mt-2 mb-2">
